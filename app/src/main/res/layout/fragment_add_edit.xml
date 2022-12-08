@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:textSize="@dimen/textSize">
+
+    <EditText
+        android:id="@+id/gameNameAddEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:hint="@string/game_name"
+        android:autofillHints=""
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/genreAddEditText"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/genreAddEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/genre"
+        android:inputType="text"
+        android:autofillHints=""
+        app:layout_constraintBottom_toTopOf="@id/spinner"
+        app:layout_constraintTop_toBottomOf="@id/gameNameAddEditText"/>
+
+    <LinearLayout
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genreAddEditText"
+        app:layout_constraintBottom_toTopOf="@id/urlAddEditText">
+
+        <TextView
+            android:id="@+id/spinnerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hours_to_complete" />
+
+        <Spinner
+            android:id="@+id/hoursAddSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:entries="@array/hours"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/urlAddEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/link"
+        android:inputType="textUri"
+        android:autofillHints="https://"
+        app:layout_constraintBottom_toTopOf="@id/infoAddEditText"
+        app:layout_constraintTop_toBottomOf="@id/spinner"/>
+
+    <EditText
+        android:id="@+id/infoAddEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:lines="5"
+        android:minLines="2"
+        android:hint="@string/information_about_game"
+        android:inputType="text"
+        android:autofillHints=""
+        app:layout_constraintBottom_toTopOf="@id/addOrEditButton"
+        app:layout_constraintTop_toBottomOf="@id/urlAddEditText"/>
+
+    <Button
+        android:id="@+id/addOrEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/infoAddEditText"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

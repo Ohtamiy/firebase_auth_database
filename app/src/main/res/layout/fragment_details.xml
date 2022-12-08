@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp">
+
+    <TextView
+        android:id="@+id/gameNameDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeGameName"
+        android:textColor="@color/black"
+        android:layout_marginTop="6sp"
+        tools:text="game name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/genreDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/black"
+        android:layout_marginTop="2sp"
+        tools:text="genre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameNameDetailsTextView"/>
+
+    <TextView
+        android:id="@+id/hoursDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/black"
+        android:layout_marginTop="2sp"
+        tools:text="hours to complete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genreDetailsTextView"/>
+
+    <TextView
+        android:id="@+id/infoDetailsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/black"
+        android:layout_marginTop="2sp"
+        android:layout_marginHorizontal="8sp"
+        tools:text="info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hoursDetailsTextView"/>
+
+    <Button
+        android:id="@+id/linkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/white"
+        android:layout_marginTop="6sp"
+        android:text="@string/link"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/editButton"
+        app:layout_constraintTop_toBottomOf="@id/infoDetailsTextView"/>
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/white"
+        android:text="@string/edit"
+        android:layout_marginTop="6sp"
+        app:layout_constraintTop_toBottomOf="@id/infoDetailsTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/linkButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

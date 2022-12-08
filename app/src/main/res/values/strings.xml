@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Games</string>
+    <string name="edit">Edit</string>
+    <string name="link">Link</string>
+    <string name="game_name">Game name</string>
+    <string name="genre">Genre</string>
+    <string name="hours_to_complete">Hours to complete</string>
+    <string name="information_about_game">Information about game</string>
+    <string name="email">Email</string>
+    <string name="auth">Auth</string>
+    <string name="register">Register</string>
+    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="password">Password</string>
+    <string name="add">Add</string>
+    <string name="log_out">Log out</string>
+    <string name="remove">Remove</string>
+    <string-array name="hours">
+        <item>less than 10 hours</item>
+        <item>around 20 hours</item>
+        <item>more than 30 hours</item>
+    </string-array>
+</resources>
